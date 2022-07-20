@@ -7,6 +7,7 @@ public:
 
     // CONSTRUCTOR
     ArrayList(int);
+    ~ArrayList();
 
     // CLASS METHODS
     virtual void Put(t);
@@ -45,6 +46,13 @@ ArrayList <t> :: ArrayList(int arraySize) {
     this->capacity = arraySize;
     this->list = new t [arraySize];
     this->length = 0;
+}
+
+
+
+template <class t>
+ArrayList <t> :: ~ArrayList() {
+    delete [] this->list;
 }
 
 
