@@ -1,7 +1,5 @@
 #include "List.h"
 
-using namespace std;
-
 // DEFINITIONS
 template <class t>
 struct node {
@@ -16,6 +14,7 @@ public:
 
     // CONSTRUCTOR
     LinkedList();
+    ~LinkedList();
 
     // CLASS METHODS
     virtual void Put(t);
@@ -44,6 +43,18 @@ LinkedList <t> :: LinkedList() {
     this->list = nullptr;
     this->current = nullptr;
     this->length = 0;
+}
+
+
+
+template <class t>
+LinkedList <t> :: ~LinkedList() {
+    node <t> * ptr;
+    while (this->list != nullptr) {
+        ptr = this->list;
+        this->list = this->list->next;
+        delete ptr;
+    }
 }
 
 

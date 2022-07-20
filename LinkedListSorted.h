@@ -1,7 +1,5 @@
 #include "LinkedList.h"
 
-using namespace std;
-
 template <class t>
 class LinkedListSorted : public LinkedList <t> {
 
