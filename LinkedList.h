@@ -49,6 +49,7 @@ LinkedList <t> :: LinkedList() {
 
 template <class t>
 LinkedList <t> :: ~LinkedList() {
+    /* Linear iteration. */
     node <t> * ptr;
     while (this->list != nullptr) {
         ptr = this->list;
